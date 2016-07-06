@@ -2,7 +2,8 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
 #include "game.h"
-class MainMenu: public Game
+#include "gameseq.h"
+class MainMenu: public Game , public GameSeq
 {
 public:
 	MainMenu();

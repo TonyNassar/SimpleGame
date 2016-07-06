@@ -9,9 +9,6 @@ class GameSeq : public Game
 public:
 	GameSeq();
 	~GameSeq();
-
-private:
-
 };
 
 #endif // !GAMESEQ_H

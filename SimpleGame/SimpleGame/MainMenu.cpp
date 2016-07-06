@@ -1,9 +1,12 @@
 #include "enums.h"
 #include "MainMenu.h"
+#include "ninja.h"
 #include <iostream>
+
 using namespace std;
 MainMenu::MainMenu()
 {
+	Ninja n;
 	Difficulty myDifficulty;
 	input = 0;
 	cout << "Welcome to beat the ninja!" << endl;
@@ -17,14 +20,21 @@ MainMenu::MainMenu()
 		if (input == 1)
 		{
 			myDifficulty = Difficulty::EASY;
+			n.setHealth(n.getHealth() / 2);
+			cout << "You picked easy mode." << endl;
 		}
 		else if (input == 2)
 		{
 			myDifficulty = Difficulty::NORMAL;
+			n.setAttack(n.getAttack() * 2);
+			cout << "You picked normal mode." << endl;
 		}
 		else if (input == 3)
 		{
 			myDifficulty = Difficulty::HARD;
+			n.setHealth(n.getHealth() * 2);
+			n.setAttack(n.getAttack() * 2);
+			cout << "You picked hard mode." << endl;
 		}
 	}
 }
