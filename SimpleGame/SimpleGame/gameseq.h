@@ -1,14 +1,17 @@
 #pragma once
 #ifndef GAMESEQ_H
 #define GAMESEQ_H
-#include "game.h"
+#include "MainMenu.h"
 #include "enums.h"
 
-class GameSeq : public Game
+class GameSeq
 {
 public:
 	GameSeq();
 	~GameSeq();
+
+private:
+	int input;
 };
 
 #endif // !GAMESEQ_H
